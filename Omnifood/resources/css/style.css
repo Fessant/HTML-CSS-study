@@ -120,13 +120,16 @@ h2:after {
     text-align: center;
     color: #e67e22;
     font-size: 120%;
-    margin-right: 10px
+    margin-right: 10px;
     
     /*secrets to align text and icons*/
     line-height: 120%;
     vertical-align: middle;
     margin-top: -5px;
-    
+}
+
+.unavailable {
+        font-display: swap
 }
 
 /* ---------- LINKS ------------ */
@@ -200,7 +203,7 @@ input[type=submit] {
 
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -221,6 +224,18 @@ header {
     float: left;
     margin-top: 20px;
 }
+
+.logo-black {
+    display: none; 
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+
+.logo-black { display: none;}
+
+/* MAIN Nav */
 
 .main-nav {
     float: right;
@@ -248,6 +263,44 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+
+/* Mobile Navi */
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* STICKY nav */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 2px #ededed;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
 
 /* ----------------------------------------------------- */
 /* FEATURES */
@@ -373,7 +426,7 @@ header {
 /* ----------------------------------------------------- */
 
 .section-testimonials {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers-min.jpg);
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
@@ -466,6 +519,10 @@ cite img {
     padding: 5px 0;
 }
 
+.order-unavailable {
+    color: rgba(196, 196, 196, 0.47);
+}
+
 
 /* ----------------------------------------------------- */
 /* FORM */
@@ -473,7 +530,7 @@ cite img {
 
 
 .contact-form {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -500,6 +557,30 @@ input[type=checkbox] {
 
 *:focus {
     outline: none;
+}
+
+.map-box {
+    width: 100%;
+    height: 560px;
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 560px;
+    position: relative;
+    z-index: 0;
+}
+
+.form-box {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    height: 560px;
+    padding-top: 40px;
 }
 
 /* ----------------------------------------------------- */
@@ -587,10 +668,26 @@ footer p {
 
 
 
+/* ----------------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------------- */
 
+.js--wp-1,
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    animation-duration: 1s;
+}
 
+.js--wp-4 {
+    animation-duration: 1s;
+}
 
-
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated {
+    opacity: 1;
+}
 
 
 
